@@ -1,0 +1,250 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+{% if collection.metafields.custom.show_collection_faq == true %}
+  <section class="faq-section section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="faq-container">
+        {% if section.settings.title != blank %}
+          <h2 class="faq-heading" style="text-align: {{ section.settings.text_alignment }}">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+
+        <div class="faq-list">
+          {% for block in section.blocks %}
+            {%- assign is_open = false -%}
+            {%- if forloop.first and section.settings.open_first -%}
+              {%- assign is_open = true -%}
+            {%- endif -%}
+
+            <div class="faq-item" {{ block.shopify_attributes }}>
+              <button class="faq-trigger {% if is_open %}active{% endif %}" aria-expanded="{{ is_open }}">
+                <span class="faq-question">{{ block.settings.question }}</span>
+                <span class="faq-icon">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    role="presentation"
+                    class="icon icon--wide icon-chevron-down"
+                    viewBox="0 0 28 16"
+                  >
+                    <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="currentColor" fill="none"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content" style="{% if is_open %}display: block;{% else %}display: none;{% endif %}">
+                <div class="faq-answer">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<style>
+  .faq-container {
+    box-shadow: 5px 5px 15px 5px #00000052;
+  }
+  .faq-heading {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .faq-item:not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+  .faq-trigger {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0;
+    line-height: 1.5;
+  }
+  .faq-icon {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  .faq-trigger.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-content {
+    overflow: hidden;
+  }
+  .faq-answer {
+    text-align: left;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+  .faq-answer p {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq-container {
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .faq-trigger {
+      font-size: 18px;
+    }
+    .faq-item:not(:first-child) .faq-trigger {
+      padding-top: 15px;
+    }
+    .faq-item:not(:last-child) .faq-trigger {
+      padding-bottom: 15px;
+    }
+    .faq-list {
+      margin-top: 5rem;
+    }
+    .faq-answer {
+      padding: 10px 0 30px;
+      font-size: 1.6rem;
+    }
+    .faq-icon {
+      max-width: 18px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .faq-container {
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .faq-trigger {
+    font-size: 14px;
+}
+    .faq-item:not(:first-child) .faq-trigger {
+      padding-top: 14px;
+    }
+    .faq-item:not(:last-child) .faq-trigger {
+      padding-bottom: 14px;
+    }
+    .faq-list {
+      margin-top: 2.4rem;
+    }
+    .faq-question {
+      max-width: 95%;
+    }
+    .faq-answer {
+      padding: 8px 0 20px;
+    }
+    .faq-icon {
+      max-width: 14px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-trigger').forEach((button) => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const isOpen = button.classList.contains('active');
+
+      button.classList.toggle('active');
+      button.setAttribute('aria-expanded', !isOpen);
+      content.style.display = isOpen ? 'none' : 'block';
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "FREQUENTLY ASKED QUESTIONS (FAQS)"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "Show first accordion open by default",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "question",
+          "label": "Question",
+          "default": "What are 5mg-25mg tablets?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>These are pre-measured tablets containing 5mg to 25mg of 7-hydroxymitragynine.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [{ "type": "faq_item" }, { "type": "faq_item" }]
+    }
+  ]
+}
+{% endschema %}
