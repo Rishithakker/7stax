@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_pnhXHp": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_Kf9PAn": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "All Products Buy 2, Get 1 FREE | Now Through 8/7 11:59pm PST.",
+            "link": "shopify://collections/all"
+          }
+        },
+        "announcement_gNyaCH": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Use Code LABOR10 for 10% OFF | Valid Through 9/1 11:59pm PST",
+            "link": ""
+          }
+        },
+        "announcement_WVP3Ny": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "7Stax 7-OH Shots - Buy 1, Get 1 FREE",
+            "link": "shopify://products/7oh-shot-50mg"
+          }
+        },
+        "announcement_E67A64": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE Priority Shipping on Orders $169+",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Kf9PAn",
+        "announcement_gNyaCH",
+        "announcement_WVP3Ny",
+        "announcement_E67A64"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-center",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_pnhXHp",
+    "header"
+  ]
+}
