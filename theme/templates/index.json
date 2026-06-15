@@ -55,6 +55,35 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection_fVyJXN": {
+      "type": "featured-collection",
+      "name": "150mg Tablets",
+      "settings": {
+        "collection": "7stax-150mg-7oh-tablets",
+        "products_to_show": 4,
+        "title": "150mg Tablets",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_fpPcNr": {
       "type": "featured-collection",
       "name": "100mg Tablets",
@@ -255,17 +284,6 @@
     },
     "17478531568a3eaad7": {
       "type": "apps",
-      "blocks": {
-        "image_slider_pro_embed_code_W6exYp": {
-          "type": "shopify://apps/image-slider-pro/blocks/embed-code/187cfdb3-f7ca-4af8-9477-517eb71154e7",
-          "settings": {
-            "embed-code": "<div id=\"enap-slider-40124\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "image_slider_pro_embed_code_W6exYp"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -395,6 +413,7 @@
   "order": [
     "image_banner_JBHWLm",
     "featured_collection_V3EDdm",
+    "featured_collection_fVyJXN",
     "featured_collection_fpPcNr",
     "featured_collection_FfUznq",
     "featured_collection_GeXQNp",
