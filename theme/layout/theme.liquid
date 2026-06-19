@@ -33,6 +33,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    <link
+      href="{{ 'swiper-bundle.min.css' | asset_url }}"
+      rel="stylesheet"
+      type="text/css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    >
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -52,6 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer="defer"></script>
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
@@ -44,6 +42,8 @@
       overflow: hidden;
       opacity: 0;
       transition: opacity 0.25s ease;
+      padding: 0.4rem 0.8rem;
+      margin: -0.4rem -0.8rem;
     }
 
     .related-products-swiper.is-initialized {
