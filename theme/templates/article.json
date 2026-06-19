@@ -48,7 +48,7 @@
       "type": "related-products-section",
       "name": "Related Products",
       "settings": {
-        "heading": "You May Aso Like",
+        "heading": "You May Also Like",
         "products": "{{ article.metafields.custom.related_products.value.add_product.value }}",
         "heading_size": "h1",
         "products_to_show": 3,
