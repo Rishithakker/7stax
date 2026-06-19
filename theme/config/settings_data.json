@@ -145,11 +145,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "14927024384642293474": {
-        "type": "shopify://apps/image-slider-pro/blocks/embed-js/187cfdb3-f7ca-4af8-9477-517eb71154e7",
-        "disabled": false,
-        "settings": {}
-      },
       "319724205969189013": {
         "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
@@ -169,13 +164,6 @@
         "type": "shopify://apps/tinyseo/blocks/article-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
         "disabled": false,
         "settings": {}
-      },
-      "10605408327587305396": {
-        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": false,
-        "settings": {
-          "version": "v3"
-        }
       },
       "11989592277864780042": {
         "type": "shopify://apps/wholesale-pricing-discount/blocks/app-embed/94cbfa01-7191-4bb2-bcd8-b519b9b3bd06",
@@ -249,6 +237,11 @@
       },
       "8605505498557855500": {
         "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }

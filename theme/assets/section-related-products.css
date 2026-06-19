@@ -2,6 +2,25 @@
   display: block;
 }
 
-.related-products__heading {
-  margin: 0 0 3rem;
+.related-products .related-products__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.related-products .jdgm-preview-badge {
+  margin: 0.4rem 0 0.8rem;
+  min-height: 1.6rem;
+}
+
+.related-products .card__content {
+  padding-bottom: 1.3rem;
+}
+
+@media screen and (max-width: 749px){
+ .related-products .related-products__header .related-products__heading {
+    font-size: 2rem;
+}
 }

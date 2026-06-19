@@ -43,9 +43,30 @@
         "content"
       ],
       "settings": {}
+    },
+    "related_products_section_Pzr9Yp": {
+      "type": "related-products-section",
+      "name": "Related Products",
+      "settings": {
+        "heading": "You May Aso Like",
+        "products": "{{ article.metafields.custom.related_products.value.add_product.value }}",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "related_products_section_Pzr9Yp"
   ]
 }

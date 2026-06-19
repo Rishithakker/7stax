@@ -4,8 +4,8 @@
     "description": "",
     "config": {
       "store": "sevenstoresz",
-      "dev_theme": "155146780824",
-      "prod_theme": "146840977560"
+      "dev_theme": "157269295256",
+      "prod_theme": "155888648344"
     },
     "scripts": {
       "info": "shopify theme info",
